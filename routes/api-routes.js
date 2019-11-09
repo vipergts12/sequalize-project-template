@@ -15,7 +15,7 @@ module.exports = function(app) {
     // Finding all Chirps, and then returning them to the user as JSON.
     // Sequelize queries are asynchronous, which helps with perceived speed.
     const results = await db.todo.findAll();
-    res.json(results);
+    res.json(results).sendStatus();
   });
 
   // POST route for saving a new todo.
