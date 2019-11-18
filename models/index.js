@@ -12,12 +12,14 @@ let sequelize;
 if (config.use_env_variable) {
   sequelize = new Sequelize(process.env[config.use_env_variable], config);
 } else {
+  // eslint-disable-next-line max-len
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
 fs
     .readdirSync(__dirname)
     .filter((file) => {
+      // eslint-disable-next-line max-len
       return (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
     })
     .forEach((file) => {

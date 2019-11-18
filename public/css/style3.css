@@ -1,0 +1,10 @@
+body  {font-family: fantasy;
+}
+#initial {
+  float: center;
+  background-color: red
+}
+.jumbotron {
+position: absolute;
+top: 65%;
+}
